@@ -5,13 +5,13 @@
 // "users" array has already been loaded and is ready to go.
 
 
-// 2, 3, 4, 5 are done!
+
 console.log(users)
 
 // Append the katas to this element:
 const main = document.querySelector('main')
 
-//Kata 1*
+//Kata 1
 const activeUser = users.filter(user => user.isActive)
 
 printKata(1, activeUser)
@@ -40,14 +40,14 @@ const overAge = users.find(users => users.age >= "active",  "38")
 
 printKata(5, overAge)
 
-// Kata 6*
+// Kata 6
 const userBalance = users
 .filter (users => users.company === "ZENCO")
 .map (users => users.balance)
 
 printKata(6, userBalance)
 
-// Kata 7*
+// Kata 7
 const hasTag = users
 
 .filter(user => user.tags.includes("fugiat"))
