@@ -3,49 +3,57 @@
 
 // The following line is here just to show you that the
 // "users" array has already been loaded and is ready to go.
+
+
+// 2, 3, 4, 5 are done!
 console.log(users)
 
 // Append the katas to this element:
 const main = document.querySelector('main')
 
 //Kata 1*
+const activeUser = users.filter(user => user.isActive)
 
-const activeUser = users.filter(user => user.isActive = "true")
-
-
-printKata(1, users.filter)
+printKata(1, activeUser)
 
 //Kata 2
 
-const emailAddress = users.map(user => user.email)
+const emailAddress = users.map(users => users.email)
 
 printKata(2, emailAddress)
 
 //Kata 3
 
-const companyProperty = users.some(user => user.company = "OVATION")
+const companyProperty = users.some(users => users.company = "OVATION")
 
 printKata(3, companyProperty)
 
 //Kata 4
 
-const userAge = users.find(user =>user.age >= "38")
+const userAge = users.find(users =>users.age >= "38")
 
 printKata(4, userAge)
 
-// Kata 5*
+// Kata 5
 
-const overAge = users.find(user => user.age = "active", "38")
+const overAge = users.find(users => users.age >= "active",  "38")
 
 printKata(5, overAge)
 
 // Kata 6*
-// const userBalance = users.
-printKata(6,)
+const userBalance = users
+.filter (users => users.company === "ZENCO")
+.map (users => users.balance)
+
+printKata(6, userBalance)
 
 // Kata 7*
+const hasTag = users
 
-printKata(7, )
+.filter(user => user.tags.includes("fugiat"))
+.map(users => users.age)
+
+printKata(7, hasTag)
 
 function printKata (kataNumber, object) {
     // For the usage of the DETAILS and SUMMARY tags
